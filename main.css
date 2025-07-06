@@ -1,25 +1,25 @@
-.module.MMM-MonthCalendar .calendar-daysinweek,
-.module.MMM-MonthCalendar .calendar-days {
+.module.MMM-WeeksCalendar .calendar-daysinweek,
+.module.MMM-WeeksCalendar .calendar-days {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
 
-.module.MMM-MonthCalendar .calendar-days [today] {
+.module.MMM-WeeksCalendar .calendar-days [today] {
     color: #000;
     background-color: #ccc;
     border-radius: 5%;
     font-weight: 600;
 }
 
-.module.MMM-MonthCalendar .prefill,
-.module.MMM-MonthCalendar .postfill {
+.module.MMM-WeeksCalendar .prefill,
+.module.MMM-WeeksCalendar .postfill {
     color: #666666;
 }
 
-.module.MMM-MonthCalendar .calendar-daysinweek div,
-.module.MMM-MonthCalendar .calendar-days div {
+.module.MMM-WeeksCalendar .calendar-daysinweek div,
+.module.MMM-WeeksCalendar .calendar-days div {
     padding: 2px 0;
     margin: 0 8px;
 }
 
-.module.MMM-MonthCalendar .module-content { text-align: center; }
+.module.MMM-WeeksCalendar .module-content { text-align: center; }

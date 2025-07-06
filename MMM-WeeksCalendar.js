@@ -1,4 +1,4 @@
-Module.register("MMM-MonthCalendar", {
+Module.register("MMM-WeeksCalendar", {
 
     defaults: {
         updateDelay: 5,
