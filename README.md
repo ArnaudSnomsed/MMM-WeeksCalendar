@@ -2,16 +2,16 @@
 
 A monthly calendar for your [MagicMirror²](https://magicmirror.builders/).
 
-[![GitHub tag](https://img.shields.io/github/tag/PalatinCoder/MMM-MonthCalendar.svg?style=flat-square)](https://github.com/PalatinCoder/MMM-MonthCalendar/releases)
-[![License](https://img.shields.io/github/license/PalatinCoder/MMM-MonthCalendar.svg?style=flat-square)](https://github.com/PalatinCoder/MMM-MonthCalendar/blob/master/LICENSE.md)
+[![GitHub tag](https://img.shields.io/github/tag/arnaudsnomsed/MMM-WeeksCalendar.svg?style=flat-square)](https://github.com/arnaudsnomsed/MMM-WeeksCalendar/releases)
+[![License](https://img.shields.io/github/license/arnaudsnomsed/MMM-WeeksCalendar.svg?style=flat-square)](https://github.com/arnaudsnomsed/MMM-WeeksCalendar/blob/master/LICENSE.md)
 
 
-![Preview](https://user-images.githubusercontent.com/5798157/74273222-5ccd5f00-4d10-11ea-873a-375591128e65.png)
+![Preview](https://arnaudsnomsed.github.io/assets/WeeksCalendar.png)
 
 ## Installation
 
-1. Navigate into your MagicMirror `modules` folder and execute `git clone https://github.com/PalatinCoder/MMM-MonthCalendar.git`
-2. Enter the `MMM-MonthCalendar` directory and execute `npm install`
+1. Navigate into your MagicMirror `modules` folder and execute `git clone https://github.com/arnaudsnomsed/MMM-WeeksCalendar.git`
+2. Enter the `MMM-WeeksCalendar` directory and execute `npm install`
 3. Navigate into the MagicMirror `config` folder and add the config below to the `config.js` file
 
 ## Configuration
@@ -26,7 +26,7 @@ There you can also add a custom text that prefixes your module's header (`header
 
 ```
 {
-    module: 'MMM-MonthCalendar',
+    module: 'MMM-WeeksCalendar',
     position: "center",
     header: "",
     config: {
