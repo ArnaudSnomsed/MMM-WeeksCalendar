@@ -1,4 +1,4 @@
-# MonthCalendar
+# WeeksCalendar
 
 A monthly calendar for your [MagicMirror²](https://magicmirror.builders/).
 
