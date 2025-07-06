@@ -101,7 +101,7 @@ Module.register("MMM-WeeksCalendar", {
 
         for (let day = 1; day <= moment().daysInMonth(); day++) {
 	    if ((day + fillBefore - 1) % 7 == 0) {
-                days.push("S"+moment().startOf('month').add(day, 'day').format("w"));
+                days.push("W"+moment().startOf('month').add(day, 'day').format("w"));
 	    }
             days.push(day);
         }
