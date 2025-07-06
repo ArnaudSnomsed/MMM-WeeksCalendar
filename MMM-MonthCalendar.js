@@ -48,7 +48,7 @@ Module.register("MMM-MonthCalendar", {
             prefill: this.getPrefill(),
             postfill: this.getPostfill(),
             days: this.getCalendarDays(),
-            today: moment().date()
+            today: moment().date(),
         }
     },
 
@@ -64,6 +64,8 @@ Module.register("MMM-MonthCalendar", {
 
         if (!this.config.showAdjacentMonths) return Array(fillBefore).fill("");
 
+        days.push("S"+moment().startOf('month').subtract(1, 'day').format("w"));
+	
         for (let preDay = fillStart; preDay <= lastMonthDayCount; preDay++) {
             days.push(preDay);
         }
@@ -78,10 +80,13 @@ Module.register("MMM-MonthCalendar", {
         if (!this.config.showAdjacentMonths) return days;
 
         let lastDay = moment().endOf('month').weekday()
-        let fillAfter = 7 - lastDay;
+        let fillAfter = 14 - lastDay;
 
         for (let postDay = 1; postDay < fillAfter; postDay++) {
-                days.push(postDay);
+	    if ((postDay + lastDay) % 7 == 0) {
+                days.push("S"+moment().endOf('month').add(postDay, 'day').format("w"));
+	    }
+            days.push(postDay);
         }
         return days;
     },
@@ -89,7 +94,15 @@ Module.register("MMM-MonthCalendar", {
     getCalendarDays: function() {
         let days = [];
 
+        let lastMonthDayCount = moment().startOf('month').subtract(1, 'day').date();
+        // The weekday int is equal the amount of days we need to fill before
+        let fillBefore = moment().startOf('month').weekday();
+        let fillStart = (lastMonthDayCount + 1) - fillBefore;
+
         for (let day = 1; day <= moment().daysInMonth(); day++) {
+	    if ((day + fillBefore - 1) % 7 == 0) {
+                days.push("S"+moment().startOf('month').add(day, 'day').format("w"));
+	    }
             days.push(day);
         }
         return days;
