@@ -64,7 +64,7 @@ Module.register("MMM-WeeksCalendar", {
 
         if (!this.config.showAdjacentMonths) return Array(fillBefore).fill("");
 
-        days.push("S"+moment().startOf('month').subtract(1, 'day').format("w"));
+        days.push("W"+moment().startOf('month').subtract(1, 'day').format("w"));
 	
         for (let preDay = fillStart; preDay <= lastMonthDayCount; preDay++) {
             days.push(preDay);
@@ -84,7 +84,7 @@ Module.register("MMM-WeeksCalendar", {
 
         for (let postDay = 1; postDay < fillAfter; postDay++) {
 	    if ((postDay + lastDay) % 7 == 0) {
-                days.push("S"+moment().endOf('month').add(postDay, 'day').format("w"));
+                days.push("W"+moment().endOf('month').add(postDay, 'day').format("w"));
 	    }
             days.push(postDay);
         }
