@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "Display a monthly calendar on your MagicMirror²",
-  "main": "MMM-WeeksCalendar.js",
+    "main": "MMM-WeeksCalendar.js",
+    "keywords": [
+	"Calendar"
+    ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
